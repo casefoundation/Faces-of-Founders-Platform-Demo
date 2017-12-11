@@ -1,0 +1,23 @@
+version: '2'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./wordpress:/var/www/wordpress
+      - ./nginx/sites:/etc/nginx/sites-enabled
+      - ./nginx/logs:/var/log/nginx/
+    links:
+      - mysql:mysql
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=fof
+      - MYSQL_DATABASE=fof
+      - MYSQL_USER=fof
+      - MYSQL_PASSWORD=fof
+    volumes:
+      - mysql:/var/lib/mysql/
+volumes:
+  mysql:

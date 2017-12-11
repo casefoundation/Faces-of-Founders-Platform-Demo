@@ -1,0 +1,3 @@
+wordpress
+nginx/logs/*.log
+.DS_Store
