@@ -6,11 +6,11 @@
 /* 
 #main-header,
 #main-footer {
-  background: #064;
+  background: #0097a7;
 }
 
 button,.upload-photo.file-input::before {
-  background: #064 !important;
+  background: #0097a7 !important;
 }
 
 .upload-photo.file-input::before {
